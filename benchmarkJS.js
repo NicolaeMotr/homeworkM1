@@ -38,8 +38,12 @@ console.log(myArray);
 
 let secondArray = [];
 
+function getRandomNumbers() {
+  return Math.floor(Math.random() * 1000) + 1;
+}
+
 for (let index = 0; index < 100; index++) {
-  secondArray[index] = Math.floor(Math.random() * 100) + 1;
+  secondArray[index] = Math.floor(Math.random() * 1000) + 1;
 }
 
 console.log("SECOND ARRAY: ", secondArray, "DIM", secondArray.length);
@@ -52,3 +56,15 @@ function getMaxAndMin(array) {
 }
 
 console.log(getMaxAndMin(secondArray));
+
+let thirdArray = [];
+
+for (let index = 0; index < 10; index++) {
+  let temporary = [];
+  for (let i = 0; i < 10; i++) {
+    temporary[i] = getRandomNumbers();
+  }
+  thirdArray.push(temporary);
+}
+
+console.log("ARRAY OF ARRAYS", thirdArray);
